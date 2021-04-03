@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	color: white;
+	background-color: $clr5;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+img {
+	width: 100%;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+
+i {
+	font-style: none;
+}
+
+ul {
+	padding: 0;
+}
+
+button {
+	outline: none;
+	border: none;
+	background-color: none;
+}
