@@ -5,7 +5,12 @@
 	}
 }
 
+.logo {
+	cursor: pointer;
+}
+
 html {
+	font-family: spartan;
 	color: white;
 	background-color: $clr2;
 	scroll-behavior: smooth;

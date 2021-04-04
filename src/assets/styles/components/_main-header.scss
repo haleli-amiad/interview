@@ -1,111 +1,70 @@
-nav {
-	position: fixed;
-	width: 100%;
-	z-index: 3;
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		overflow: hidden;
-		background-color: rgba(255, 255, 255, 0.166);
-		border-bottom: 1px solid darkgray;
-		li {
-			border-top: 1px solid darkgray;
+header {
+	@include for-mobile-layout {
+		background-image: url(../../images/hero-bg-desktop.jpg);
+		max-height: rem(820px);
+		text-align: left;
+	}
+	height: rem(848px);
+	background-size: 100vw;
+	background-color: #111111;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-image: url(../../images/hero-bg-mobile.jpg);
+	img {
+		@include for-mobile-layout {
+			width: rem(103px);
+			height: rem(40px);
+			margin: rem(65px) 0 rem(153px) 0;
 		}
-		li a {
-			text-align: center;
-			display: block;
-			padding: 20px 20px;
-			text-decoration: none;
+		margin: 0 auto;
+		width: rem(83px);
+		height: rem(32px);
+		margin-top: rem(232px);
+		margin-bottom: rem(32px);
+	}
+	h1 {
+		margin-top: 24px;
+		letter-spacing: -0.22px;
+		font-family: 'spartan-light';
+		font-size: rem(32px);
+		letter-spacing: -.4px;
+		margin-bottom: rem(24px);
+		@include for-mobile-layout {
+			font-size: rem(64px);
 		}
 	}
-	.logo {
-		display: block;
-		float: left;
-		font-size: 2em;
-		padding: 10px 20px;
-		text-decoration: none;
-	}
-	.menu {
-		clear: both;
-		max-height: 0;
-		transition: max-height .2s ease-out;
-	}
-	/* menu icon */
-	.menu-icon {
-		cursor: pointer;
-		float: right;
-		padding: 28px 20px;
-		position: relative;
-		user-select: none;
-		.navicon {
-			background: #fff;
-			display: block;
-			height: 2px;
-			position: relative;
-			transition: background .2s ease-out;
-			width: 18px;
-		}
-		.navicon:before,
-		.navicon:after {
-			background: #fff;
-			content: '';
-			display: block;
-			height: 100%;
-			position: absolute;
-			transition: all .2s ease-out;
-			width: 100%;
-		}
-		.navicon:before {
-			top: 5px;
-		}
-		.navicon:after {
-			top: -5px;
+	h2 {
+		font-family: spartan;
+		font-size: rem(15px);
+		letter-spacing: 1px;
+		font-weight: 300;
+		line-height: 25px;
+		@include for-mobile-layout {
+			font-size: rem(18px);
 		}
 	}
+	h1,
+	h2 {
+		max-width: rem(524px);
+	}
+	button {
+		background-color: transparent;
+		border: 1px solid white;
+		text-transform: uppercase;
+		font-family: spartan-semibold;
+		font-size: rem(14px);
+		line-height: 16px;
+		letter-spacing: 2px;
+		margin: 0 auto;
+		margin-top: rem(56px);
+		width: 245px;
+		height: 64px;
+		color: white;
+		@include for-mobile-layout {
+			margin: rem(42px) 0 0 0;
 
-	.menu-btn {
-		display: none;
-	}
-	.menu-btn:checked ~ .menu {
-		max-height: 240px;
-	}
-	.menu-btn:checked ~ .menu-icon .navicon {
-		background: transparent;
-	}
-	.menu-btn:checked ~ .menu-icon .navicon:before {
-		transform: rotate(-45deg);
-	}
-	.menu-btn:checked ~ .menu-icon .navicon:after {
-		transform: rotate(45deg);
-	}
-	.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-	.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-		top: 0;
-	}
-}
-
-/* 48em = 768px */
-
-@media (min-width: 48em) {
-	nav {
-		ul {
-			border: none;
-			background-color: transparent;
-		}
-		li {
-			float: left;
-			a {
-				padding: 20px 30px;
-			}
-		}
-		.menu {
-			clear: none;
-			float: right;
-			max-height: none;
-		}
-		.menu-icon {
-			display: none;
+			background-color: white;
+			color: #111111;
 		}
 	}
 }

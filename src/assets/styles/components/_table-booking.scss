@@ -1,0 +1,99 @@
+.table-booking {
+	background-color: #fff;
+	color: #111111;
+
+	.tb-main {
+		@include for-mobile-layout {
+			height: 920px;
+		}
+		height: 1144px;
+		background-image: url("../../images/pattern-curve-top-right.svg");
+		background-repeat: no-repeat;
+		background-size: 570px 350px;
+		.family-image {
+			width: 326px;
+			height: 400px;
+			@include for-mobile-layout {
+				height: 600px;
+				margin-top: rem(160px);
+				width: 540px;
+			}
+		}
+		.content {
+			text-align: center;
+			@include for-mobile-layout {
+				width: 40%;
+				text-align: left;
+			}
+			h2 {
+				margin-top: 4rem;
+				font-family: spartan-bold;
+				font-size: rem(40px);
+				line-height: 56px;
+				letter-spacing: -.5px;
+				margin-bottom: 1rem;
+			}
+			p {
+				font-size: rem(18px);
+				line-height: 30px;
+				margin-bottom: rem(32px);
+			}
+			button {
+				border: 1px solid #111111;
+				color: #111111;
+				text-transform: uppercase;
+				font-size: rem(14px);
+				font-family: spartan-semibold;
+				letter-spacing: 2px;
+				width: 245px;
+				height: 64px;
+				margin-bottom: 78px;
+			}
+			h3 {
+				cursor: pointer;
+				color: #4c4c4c;
+				font-family: spartan-semibold;
+				margin-bottom: rem(12px);
+				font-size: rem(14px);
+				line-height: 28px;
+				letter-spacing: 2px;
+				&:hover {
+					color: #111111;
+				}
+			}
+		}
+	}
+	.tb-cta {
+		color: white;
+		background-image: url(../../images/ready-bg-desktop.jpg);
+		> * {
+			height: 240px;
+			text-align: center;
+			margin: 0 auto;
+			@include for-mobile-layout {
+				text-align: left;
+				margin: unset;
+			}
+		}
+
+		h2 {
+			font-family: spartan-bold;
+			font-size: rem(40px);
+			line-height: 56px;
+			letter-spacing: -.5px;
+		}
+		button {
+			width: 245px;
+			height: 64px;
+			background-color: #fff;
+			color: #111111;
+			text-transform: uppercase;
+			font-family: spartan-semibold;
+			font-size: rem(14px);
+			margin: 0 auto;
+			@include for-mobile-layout {
+				margin: unset;
+			}
+		}
+	}
+}

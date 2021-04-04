@@ -1,8 +1,26 @@
 .main-footer {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 1rem;
+	@include for-mobile-layout{
+		height: rem(240px);
+		text-align: left;
+	}
+	height: rem(440px);
 	text-align: center;
+	.footer-content {
+		img {
+			max-width: rem(104px);
+			height: rem(40px);
+			margin: 0 auto;
+			@include for-mobile-layout {
+				margin: unset;
+			}
+		}
+		p {
+			@include for-mobile-layout {
+				margin-top: 0;
+			}
+			font-size: rem(14px);
+			line-height: 28px;
+			letter-spacing: 2px;
+		}
+	}
 }

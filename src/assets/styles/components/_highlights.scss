@@ -1,0 +1,111 @@
+.highlights {
+	background-color: #111111;
+	text-align: center;
+	padding-top: rem(75px);
+	padding-bottom: rem(72px);
+	@include for-mobile-layout {
+		height: rem(761px);
+		padding-top: rem(205px);
+		text-align: left;
+		padding-bottom: unset;
+	}
+	.highlights-desc {
+		.svg {
+			background-image: url(../../images/pattern-divide.svg);
+			width: 71px;
+			height: 7px;
+			position: relative;
+			background-position-x: 50%;
+			margin: 0 auto;
+			top: -35px;
+			@include for-mobile-layout {
+				margin: 0;
+				top: -48px;
+			}
+		}
+		h2 {
+			@include for-mobile-layout {
+				font-size: rem(40px);
+				line-height: 56px;
+			}
+			font-size: rem(32px);
+			font-family: spartan-bold;
+			line-height: 40px;
+			letter-spacing: -.5px;
+		}
+		p {
+			@include for-mobile-layout {
+				font-size: rem(18px);
+				line-height: 30px;
+				letter-spacing: -.22px;
+			}
+			margin-top: 1rem;
+			font-size: rem(15px);
+			line-height: 25px;
+			letter-spacing: -.19px;
+			margin-bottom: rem(64px);
+		}
+		h2,
+		p {
+			max-width: rem(445px);
+		}
+	}
+	.items-list {
+		@include for-mobile-layout {
+			height: rem(441px);
+		}
+	}
+	.items-container {
+		&:nth-child(2) {
+			margin: rem(24px) 0;
+			padding: rem(24px) 0;
+			border-top: 1px solid #97979760;
+			border-bottom: 1px solid #97979760;
+		}
+		@include for-mobile-layout {
+			max-width: rem(540px);
+		}
+		.image-container {
+			width: 100%;
+			z-index: 1;
+			margin-bottom: rem(32px);
+			@include for-mobile-layout {
+				margin: 0;
+				width: rem(160px);
+				background-image: url(../../images/pattern-divide.svg);
+				background-repeat: no-repeat;
+				background-position: top right;
+				background-position-y: 10px;
+			}
+			img {
+				z-index: 2;
+				@include for-mobile-layout {
+					width: rem(128px);
+					height: rem(96px);
+				}
+				width: 100%;
+				max-height: rem(245px);
+				object-fit: cover;
+			}
+		}
+		.desc-container {
+			.item-title {
+				font-family: spartan-bold;
+				font-size: rem(18px);
+				line-height: 28px;
+				letter-spacing: -.22px;
+			}
+			h3 {
+				margin-top: 4px;
+				font-family: 'spartan-light';
+				font-size: rem(15px);
+				line-height: 28px;
+				letter-spacing: -.19px;
+			}
+			@include for-mobile-layout {
+				margin-left: rem(30px);
+				width: rem(350px);
+			}
+		}
+	}
+}

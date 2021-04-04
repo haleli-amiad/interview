@@ -1,7 +1,10 @@
 .main-layout {
 	display: grid;
-	grid-template-columns: minmax(2rem, 1fr) minmax(auto, 1440px) minmax(2rem, 1fr);
+	grid-template-columns: minmax(.5rem, 1fr) minmax(auto, 327px) minmax(.5rem, 1fr);
+	@include for-mobile-layout {
+		grid-template-columns: minmax(2rem, 1fr) minmax(auto, 1100px) minmax(2rem, 1fr);
 
+	}
 	> * {
 		grid-column: 2;
 	}

@@ -1,0 +1,107 @@
+.description {
+	@include for-mobile-layout {
+		height: rem(1441px);
+		padding-bottom: 0;
+	}
+	height: fit-content;
+	padding-bottom: 2rem;
+	background-color: #fff;
+	color: #242b37;
+	text-align: center;
+	@include for-mobile-layout {
+		text-align: left;
+	}
+	.content {
+		.svg {
+			background-image: url(../../images/pattern-divide.svg);
+			width: 100%;
+			height: 7px;
+			position: relative;
+			z-index: 3;
+			top: -35px;
+		}
+	}
+	h2 {
+		z-index: 2;
+		font-family: spartan-bold;
+		font-size: rem(40px);
+		line-height: 56px;
+		letter-spacing: -.5px;
+	}
+	p {
+		z-index: 2;
+		font-size: rem(18px);
+		line-height: 30px;
+		letter-spacing: -.22px;
+	}
+	.desc-1 {
+		.content {
+			@include for-mobile-layout {
+				margin-top: rem(177px);
+				width: 40%;
+			
+			}
+			display: inline;
+			> * {
+				@include for-mobile-layout {
+					margin-left: rem(120px);
+					width: rem(445px);
+				}
+			}
+		}
+		.image-container {
+			position: relative;
+			z-index: 1;
+			background-image: url("../../images/pattern-curve-top-right.svg");
+			background-repeat: no-repeat;
+			background-position: -200px 200px;
+			height: 600px;
+		}
+		.image {
+			position: relative;
+			display: inline;
+			z-index: 2;
+			width: 100%;
+			height: 400px;
+			margin-bottom: 2rem;
+			top: -50px;
+			@include for-mobile-layout {
+				width: 540px;
+				height: 720px;
+			}
+		}
+	}
+	.desc-2 {
+		.content {
+			@include for-mobile-layout {
+				margin-top: rem(321px);
+			}
+			> * {
+				@include for-mobile-layout {
+					width: rem(445px);
+				}
+			}
+		}
+		.image-container {
+			flex-direction: row-reverse;
+			position: relative;
+			z-index: 1;
+			background-image: url("../../images/pattern-curve-top-left.svg");
+			background-repeat: no-repeat;
+			background-position: 400px 400px;
+		}
+		.image {
+			position: relative;
+			display: inline;
+			z-index: 2;
+			width: 100%;
+			height: 400px;
+			margin-bottom: 2rem;
+			@include for-mobile-layout {
+				bottom: -150px;
+				width: 540px;
+				height: 720px;
+			}
+		}
+	}
+}
